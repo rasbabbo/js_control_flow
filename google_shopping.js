@@ -1,4 +1,5 @@
-// var data = require("./products.json") 
+var data = require("./products.json")
+var items = data["items"] 
 // var shopping = [];
 // var prodNum = 0
 // //console.log(data);
@@ -21,14 +22,27 @@
 
 //QUESTION 2
 
-var data = require("./products.json");
-var items = data["items"];
-var backorders = [];
+// var data = require("./products.json");
+// var items = data["items"];
+// var backorders = [];
+
+// for (i = 0; i < items.length; i++) {
+// 	if (items[i]['product']['inventories'][0]['availability'] === "backorder") {
+// 		console.log("backordered");
+// 		console.log(items[i]["product"]["title"]);
+// 	}
+// }
+
+
+//QUESTION 3 ITEMS W/ MORE THAN 1 IMAGE
+
+var multiImage = []
 
 for (i = 0; i < items.length; i++) {
-	if (items[i]['product']['inventories'][0]['availability'] === "backorder") {
-		console.log("backordered");
+	if(items[i]["product"]["images"].length > 1) {
+		console.log("multiple images");
 		console.log(items[i]["product"]["title"]);
 	}
 }
+
 
