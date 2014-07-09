@@ -46,11 +46,21 @@ var items = data["items"]
 
 //QUESTION 4 FINDING CANONS
 
+// for (i = 0; i < items.length; i++) {
+// 	if (items[i]["product"]["brand"] === "Canon") {
+// 		console.log(items[i]["product"]["title"]);
+// 	}
+// }
+
+//QUESTION 5 FINDING EBAYS AND CANONS
+
 for (i = 0; i < items.length; i++) {
-	if (items[i]["product"]["brand"] === "Canon") {
+	if ((items[i]["product"]["author"]["name"] === "eBay") && (items[i]["product"]["brand"] === "Canon")) {
 		console.log(items[i]["product"]["title"]);
 	}
 }
+
+
 
 
 
