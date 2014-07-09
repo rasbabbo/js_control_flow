@@ -36,13 +36,22 @@ var items = data["items"]
 
 //QUESTION 3 ITEMS W/ MORE THAN 1 IMAGE
 
-var multiImage = []
+
+// for (i = 0; i < items.length; i++) {
+// 	if(items[i]["product"]["images"].length > 1) {
+// 		console.log("multiple images");
+// 		console.log(items[i]["product"]["title"]);
+// 	}
+// }
+
+//QUESTION 4 FINDING CANONS
 
 for (i = 0; i < items.length; i++) {
-	if(items[i]["product"]["images"].length > 1) {
-		console.log("multiple images");
+	if (items[i]["product"]["brand"] === "Canon") {
 		console.log(items[i]["product"]["title"]);
 	}
 }
+
+
 
 
